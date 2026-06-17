@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknopreneur Exhibition - Sistem Informasi</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration & Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        deep: '#0B0F19',
+                        cyan: '#00D2FF',
+                        emerald: '#10B981',
+                        neon: '#39FF14'
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Smooth Scrolling & Utilities */
+        html { scroll-behavior: smooth; }
+        body { background-color: #0B0F19; color: #ffffff; }
+        
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        /* Hide scrollbar for cleaner look on mobile */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #00D2FF; border-radius: 10px; }
+
+        /* Animation delays for staggered loading */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="font-sans antialiased relative min-h-screen overflow-x-hidden selection:bg-cyan selection:text-deep">
+
+    <!-- Ambient Glowing Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-20%] w-96 h-96 bg-cyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-20%] w-96 h-96 bg-emerald rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse-slow delay-200"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-md mx-auto md:max-w-3xl lg:max-w-5xl px-5 py-8 space-y-12">
+        
+        <!-- HEADER SECTION -->
+        <header class="text-center space-y-3 opacity-0 animate-fade-in-up">
+            <div class="inline-block px-3 py-1 rounded-full glass-card text-xs font-semibold tracking-wide text-cyan mb-2 border-cyan/30 shadow-[0_0_10px_rgba(0,210,255,0.2)]">
+                🚀 Kelompok 1 • Sistem Informasi UPP
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+                Teknopreneur <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-emerald">Exhibition</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base max-w-lg mx-auto">
+                Menghadirkan solusi teknologi modern untuk memecahkan masalah masa kini dan membangun masa depan.
+            </p>
+        </header>
+
+        <!-- PRODUCT/SERVICE CARDS SECTION -->
+        <section class="space-y-6 opacity-0 animate-fade-in-up delay-100">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="h-[2px] flex-1 bg-gradient-to-r from-transparent to-cyan/50"></div>
+                <h2 class="text-lg font-bold text-white tracking-wide uppercase">Katalog Produk</h2>
+                <div class="h-[2px] flex-1 bg-gradient-to-l from-transparent to-emerald/50"></div>
+            </div>
+
+            <!-- Grid Layout for Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                
+                <!-- Card 1: KosinAja -->
+                <div class="glass-card rounded-2xl p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,210,255,0.15)] hover:border-cyan/40 group flex flex-col h-full">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-[4/3] relative">
+                        <img src="https://i.imgur.com/Rd5qovf.jpeg" alt="KosinAja" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 bg-deep/80 backdrop-blur text-cyan text-[10px] font-bold px-2 py-1 rounded-md">Platform</div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-cyan transition-colors">KosinAja</h3>
+                    <p class="text-gray-400 text-sm mb-5 flex-grow">Temukan Kos Impianmu dengan lebih mudah bersama KosinAja.</p>
+                    
+                    <!-- Tombol Kontak Produk 1: WA & IG -->
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <a href="https://wa.me/6282284611899" target="_blank" class="flex items-center justify-center py-2.5 rounded-xl font-semibold text-white text-[11px] sm:text-xs bg-gradient-to-r from-emerald to-green-500 hover:from-green-500 hover:to-emerald transition-all shadow-[0_0_10px_rgba(16,185,129,0.3)]">
+                            <i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/kos_inaja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center justify-center py-2.5 rounded-xl font-semibold text-white text-[11px] sm:text-xs bg-gradient-to-r from-pink-500 to-purple-500 hover:from-purple-500 hover:to-pink-500 transition-all shadow-[0_0_10px_rgba(236,72,153,0.3)]">
+                            <i class="fa-brands fa-instagram mr-1.5 text-sm"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+                
+
+                <!-- Card 2: Setengah Lusin -->
+                <div class="glass-card rounded-2xl p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] hover:border-emerald/40 group flex flex-col h-full">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-[4/3] relative">
+                        <img src="https://i.imgur.com/wjRs6Mp.jpeg" alt="Manajemen Inventori" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 bg-deep/80 backdrop-blur text-emerald text-[10px] font-bold px-2 py-1 rounded-md">Platform</div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-emerald transition-colors">Setengah Lusin</h3>
+                    <p class="text-gray-400 text-sm mb-5 flex-grow">Kumpulan berbagai barang unik, viral, dan bermanfaat dalam satu saluran.!</p>
+                    
+                    <!-- Tombol Kontak Produk 2: WA & TikTok -->
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <a href="https://whatsapp.com/channel/0029VbCLUlFLo4hdhEFLh43Y" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center py-2.5 rounded-xl font-semibold text-white text-[11px] sm:text-xs bg-gradient-to-r from-emerald to-green-500 hover:from-green-500 hover:to-emerald transition-all shadow-[0_0_10px_rgba(16,185,129,0.3)]">
+                            <i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> WhatsApp
+                        </a>
+                        <a href="https://www.tiktok.com/@n.c.i.i?_r=1&_t=ZS-96rpcu58QEu" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center py-2.5 rounded-xl font-semibold text-white text-[11px] sm:text-xs bg-gradient-to-r from-gray-700 to-black hover:from-black hover:to-gray-700 border border-gray-600 transition-all shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                            <i class="fa-brands fa-tiktok mr-1.5 text-sm"></i> TikTok
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Animal Artbook -->
+                <div class="glass-card rounded-2xl p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,210,255,0.15)] hover:border-cyan/40 group flex flex-col h-full">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-[4/3] relative">
+                        <img src="https://i.imgur.com/kn3U7Ov.jpeg" alt="E-Commerce Lokal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 bg-deep/80 backdrop-blur text-blue-400 text-[10px] font-bold px-2 py-1 rounded-md">Platform</div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">Animal Artbook</h3>
+                    <p class="text-gray-400 text-sm mb-5 flex-grow">Jelajahi dunia hewan melalui ilustrasi kreatif dalam Animal Artbook.</p>
+                    
+                    <!-- Tombol Link Pembelian Produk 3: Lynk.id -->
+                    <div class="mt-auto">
+                        <a href="https://lynk.id/a1sisteminformasi/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 rounded-xl font-semibold text-white text-xs sm:text-sm bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-cyan-500 hover:to-blue-500 transition-all shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_20px_rgba(0,210,255,0.6)]">
+                            <i class="fa-solid fa-cart-shopping mr-2"></i> Beli via Lynk.id
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOCIAL MEDIA & CONTACT -->
+        <section class="opacity-0 animate-fade-in-up delay-200 pt-6">
+            <div class="glass-card rounded-3xl p-6 text-center space-y-4">
+                <h3 class="text-sm font-bold text-gray-300">Mari Terhubung dengan Kami</h3>
+                <div class="flex justify-center gap-4">
+                    <!-- Instagram -->
+                    <!-- Ganti link href di bawah dengan link IG kelompok Anda -->
+                    <a href="https://www.instagram.com/sisteminformasii_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-xl text-white hover:text-cyan hover:border-cyan hover:shadow-[0_0_15px_rgba(0,210,255,0.5)] transition-all duration-300 hover:-translate-y-1">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center pb-8 pt-4 opacity-0 animate-fade-in-up delay-300">
+            <p class="text-xs text-gray-500 font-medium">
+                &copy; <span id="year"></span> Created by <span class="text-gray-300">Kelompok 1</span><br>
+                Sistem Informasi UPP
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Script for Dynamic Year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
